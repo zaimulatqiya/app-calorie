@@ -1,0 +1,4 @@
+Model,Accuracy (%),Precision,Recall,F1-Score,Loss,Parameters,Inference (ms),Model Size (MB)
+MobileNetV2,72.61,0.7338,0.7261,0.7264,0.8399,"2,424,274",105.22,22.54
+EfficientNetB0,12.24,0.0150,0.1224,0.0267,2.6808,"4,215,861",148.40,37.12
+SimpleCNN,76.99,0.7810,0.7699,0.7720,0.7114,"2,424,274",117.98,10.87

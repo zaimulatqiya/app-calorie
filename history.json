@@ -1,0 +1,972 @@
+[
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 99.46,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\Overhead-plate-Nasi-Goreng-Indon.jpg",
+        "timestamp": "28/09/2025, 16:51:09"
+    },
+    {
+        "food_name": "Bakso",
+        "calories": 303,
+        "confidence": 99.09,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 202.0,
+        "image_url": "static/uploads\\bakso-enak-di-malang-00.jpg",
+        "timestamp": "28/09/2025, 16:51:34"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 10.81,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\maxresdefault.jpg",
+        "timestamp": "28/09/2025, 16:51:49"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 10.8,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\Overhead-plate-Nasi-Goreng-Indon.jpg",
+        "timestamp": "28/09/2025, 16:52:00"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 10.82,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\bakso-enak-di-malang-00.jpg",
+        "timestamp": "28/09/2025, 16:52:18"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 10.82,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\Rawon.jpg",
+        "timestamp": "28/09/2025, 16:52:28"
+    },
+    {
+        "food_name": "Bakso",
+        "calories": 303,
+        "confidence": 28.11,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 202.0,
+        "image_url": "static/uploads\\bakso-enak-di-malang-00.jpg",
+        "timestamp": "28/09/2025, 16:52:47"
+    },
+    {
+        "food_name": "Ayam Goreng",
+        "calories": 412,
+        "confidence": 83.25,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 275.0,
+        "image_url": "static/uploads\\maxresdefault.jpg",
+        "timestamp": "28/09/2025, 16:52:56"
+    },
+    {
+        "food_name": "Gudeg",
+        "calories": 248,
+        "confidence": 73.16,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 165.0,
+        "image_url": "static/uploads\\238137.jpg",
+        "timestamp": "28/09/2025, 16:55:03"
+    },
+    {
+        "food_name": "Nasi Kuning",
+        "calories": "Tidak tersedia",
+        "confidence": 40.57,
+        "model_used": "mobilenet",
+        "portion": null,
+        "per100g": null,
+        "image_url": "static/uploads\\NasiKuning-9_jpg.rf.c1db974e5206aa46fb2fb28f25af606e.jpg",
+        "timestamp": "28/09/2025, 16:56:50"
+    },
+    {
+        "food_name": "Gado Gado",
+        "calories": "Tidak tersedia",
+        "confidence": 48.94,
+        "model_used": "mobilenet",
+        "portion": null,
+        "per100g": null,
+        "image_url": "static/uploads\\NasiKuning-6_jpg.rf.154fda2d33104f46008a4e11c6620939.jpg",
+        "timestamp": "28/09/2025, 16:58:14"
+    },
+    {
+        "food_name": "Ayam Goreng",
+        "calories": 412,
+        "confidence": 81.61,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 275.0,
+        "image_url": "static/uploads\\maxresdefault.jpg",
+        "timestamp": "28/09/2025, 17:01:39"
+    },
+    {
+        "food_name": "Bakso",
+        "calories": 303,
+        "confidence": 47.09,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 202.0,
+        "image_url": "static/uploads\\554542391_17880227457393310_4657.jpg",
+        "timestamp": "28/09/2025, 17:01:47"
+    },
+    {
+        "food_name": "Gado Gado",
+        "calories": 206,
+        "confidence": 48.94,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 137.0,
+        "image_url": "static/uploads\\NasiKuning-6_jpg.rf.154fda2d33104f46008a4e11c6620939.jpg",
+        "timestamp": "28/09/2025, 17:02:03"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 70.4,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\NasiKuning-13_jpg.rf.f36cc8024a385053af2104fef2b653e4.jpg",
+        "timestamp": "28/09/2025, 17:02:09"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 76.51,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\NasiKuning-5_jpg.rf.b3e38d9d0cd4ba712a766ad2c65cb0a5.jpg",
+        "timestamp": "28/09/2025, 17:02:41"
+    },
+    {
+        "food_name": "Nasi Kuning",
+        "calories": "Tidak tersedia",
+        "confidence": 40.57,
+        "model_used": "mobilenet",
+        "portion": null,
+        "per100g": null,
+        "image_url": "static/uploads\\NasiKuning-9_jpg.rf.c1db974e5206aa46fb2fb28f25af606e.jpg",
+        "timestamp": "28/09/2025, 17:02:48"
+    },
+    {
+        "food_name": "Nasi Kuning",
+        "calories": "Tidak tersedia",
+        "confidence": 40.57,
+        "model_used": "mobilenet",
+        "portion": null,
+        "per100g": null,
+        "image_url": "static/uploads\\NasiKuning-9_jpg.rf.c1db974e5206aa46fb2fb28f25af606e.jpg",
+        "timestamp": "28/09/2025, 17:03:47"
+    },
+    {
+        "food_name": "Nasi Kuning",
+        "calories": "Tidak tersedia",
+        "confidence": 40.57,
+        "model_used": "mobilenet",
+        "portion": null,
+        "per100g": null,
+        "image_url": "static/uploads\\NasiKuning-9_jpg.rf.c1db974e5206aa46fb2fb28f25af606e.jpg",
+        "timestamp": "28/09/2025, 17:04:00"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 25.07,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\nasi-pecel-10_jpg.rf.e9d9c23905ec8fcf64fe2009e06ff5bd.jpg",
+        "timestamp": "28/09/2025, 17:04:35"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 64.26,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\nasi-pecel-23_jpg.rf.f227a15f81f9ec5977368ea21f0a2c81.jpg",
+        "timestamp": "28/09/2025, 17:04:43"
+    },
+    {
+        "food_name": "Gudeg",
+        "calories": 248,
+        "confidence": 64.86,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 165.0,
+        "image_url": "static/uploads\\nasi-pecel-8_jpg.rf.3b99266e24735d5109497f6f9b4742b9.jpg",
+        "timestamp": "28/09/2025, 17:04:50"
+    },
+    {
+        "food_name": "Gudeg",
+        "calories": 248,
+        "confidence": 24.2,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 165.0,
+        "image_url": "static/uploads\\nasi-pecel-5_jpg.rf.7e75f7e458f56db586db539c6183b63c.jpg",
+        "timestamp": "28/09/2025, 17:06:43"
+    },
+    {
+        "food_name": "Gudeg",
+        "calories": 248,
+        "confidence": 23.82,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 165.0,
+        "image_url": "static/uploads\\nasi-pecel-8_jpg.rf.3b99266e24735d5109497f6f9b4742b9.jpg",
+        "timestamp": "28/09/2025, 17:06:58"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 10.79,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\nasi-pecel-10_jpg.rf.e9d9c23905ec8fcf64fe2009e06ff5bd.jpg",
+        "timestamp": "28/09/2025, 17:07:12"
+    },
+    {
+        "food_name": "Nasi Kuning",
+        "calories": "Tidak tersedia",
+        "confidence": 40.57,
+        "model_used": "mobilenet",
+        "portion": null,
+        "per100g": null,
+        "image_url": "static/uploads\\NasiKuning-9_jpg.rf.c1db974e5206aa46fb2fb28f25af606e.jpg",
+        "timestamp": "28/09/2025, 17:07:24"
+    },
+    {
+        "food_name": "Rawon",
+        "calories": 507,
+        "confidence": 86.64,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 338.0,
+        "image_url": "static/uploads\\Rawon.jpg",
+        "timestamp": "28/09/2025, 17:07:44"
+    },
+    {
+        "food_name": "Gado Gado",
+        "calories": 206,
+        "confidence": 99.56,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 137.0,
+        "image_url": "static/uploads\\Gado_gado_jakarta.jpg",
+        "timestamp": "28/09/2025, 17:08:40"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 58.9,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\gnz1nWPqEgzB5qD72VPIuVVccGQWXLGq.jpg",
+        "timestamp": "28/09/2025, 17:09:49"
+    },
+    {
+        "food_name": "Gulai Tunjang",
+        "calories": 183,
+        "confidence": 56.24,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 122.0,
+        "image_url": "static/uploads\\Resep_Telur_Balado_Pedas_Manis.jpg",
+        "timestamp": "28/09/2025, 17:12:38"
+    },
+    {
+        "food_name": "Telur Balado",
+        "calories": 213,
+        "confidence": 33.56,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 142.0,
+        "image_url": "static/uploads\\telur_balado (6).jpg",
+        "timestamp": "28/09/2025, 17:13:23"
+    },
+    {
+        "food_name": "Sate",
+        "calories": 300,
+        "confidence": 99.98,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 200.0,
+        "image_url": "static/uploads\\image_750x_67affb0e4227a.jpg",
+        "timestamp": "28/09/2025, 17:57:57"
+    },
+    {
+        "food_name": "Rendang",
+        "calories": "Tidak tersedia",
+        "confidence": 35.75,
+        "model_used": "mobilenet",
+        "portion": null,
+        "per100g": null,
+        "image_url": "static/uploads\\ayam goreng.jpg",
+        "timestamp": "28/09/2025, 17:58:14"
+    },
+    {
+        "food_name": "Bakso",
+        "calories": 303,
+        "confidence": 99.09,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 202.0,
+        "image_url": "static/uploads\\bakso-enak-di-malang-00.jpg",
+        "timestamp": "28/09/2025, 17:58:30"
+    },
+    {
+        "food_name": "Pempek",
+        "calories": 243,
+        "confidence": 79.95,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 162.0,
+        "image_url": "static/uploads\\pempek_295.jpg",
+        "timestamp": "28/09/2025, 17:59:24"
+    },
+    {
+        "food_name": "Pempek",
+        "calories": 243,
+        "confidence": 94.28,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 162.0,
+        "image_url": "static/uploads\\pempek_298.jpg",
+        "timestamp": "28/09/2025, 17:59:35"
+    },
+    {
+        "food_name": "Bebek Betutu",
+        "calories": "Tidak tersedia",
+        "confidence": 53.11,
+        "model_used": "simplecnn",
+        "portion": null,
+        "per100g": null,
+        "image_url": "static/uploads\\pic_155.jpg",
+        "timestamp": "28/09/2025, 17:59:53"
+    },
+    {
+        "food_name": "Gudeg",
+        "calories": 248,
+        "confidence": 47.51,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 165.0,
+        "image_url": "static/uploads\\pic_156.jpg",
+        "timestamp": "28/09/2025, 17:59:59"
+    },
+    {
+        "food_name": "Pempek",
+        "calories": 243,
+        "confidence": 65.76,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 162.0,
+        "image_url": "static/uploads\\gnz1nWPqEgzB5qD72VPIuVVccGQWXLGq.jpg",
+        "timestamp": "28/09/2025, 23:31:14"
+    },
+    {
+        "food_name": "Sate",
+        "calories": 300,
+        "confidence": 99.92,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 200.0,
+        "image_url": "static/uploads\\image_750x_67affb0e4227a.jpg",
+        "timestamp": "28/09/2025, 23:31:26"
+    },
+    {
+        "food_name": "Ayam Goreng",
+        "calories": 412,
+        "confidence": 86.51,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 275.0,
+        "image_url": "static/uploads\\maxresdefault.jpg",
+        "timestamp": "28/09/2025, 23:31:40"
+    },
+    {
+        "food_name": "Gado Gado",
+        "calories": 206,
+        "confidence": 96.4,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 137.0,
+        "image_url": "static/uploads\\Gado_gado_jakarta.jpg",
+        "timestamp": "28/09/2025, 23:32:09"
+    },
+    {
+        "food_name": "Gudeg",
+        "calories": 248,
+        "confidence": 37.66,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 165.0,
+        "image_url": "static/uploads\\gudeg_440.jpg",
+        "timestamp": "28/09/2025, 23:32:40"
+    },
+    {
+        "food_name": "Bakso",
+        "calories": 303,
+        "confidence": 47.73,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 202.0,
+        "image_url": "static/uploads\\soto_693.jpg",
+        "timestamp": "28/09/2025, 23:32:54"
+    },
+    {
+        "food_name": "Bebek Betutu",
+        "calories": 375,
+        "confidence": 67.59,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 250.0,
+        "image_url": "static/uploads\\soto_695.jpg",
+        "timestamp": "28/09/2025, 23:33:02"
+    },
+    {
+        "food_name": "Telur Dadar",
+        "calories": 231,
+        "confidence": 59.4,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 154.0,
+        "image_url": "static/uploads\\telur_dadar (80).jpg",
+        "timestamp": "28/09/2025, 23:33:29"
+    },
+    {
+        "food_name": "Sate",
+        "calories": 300,
+        "confidence": 99.98,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 200.0,
+        "image_url": "static/uploads\\image_750x_67affb0e4227a.jpg",
+        "timestamp": "28/09/2025, 23:33:52"
+    },
+    {
+        "food_name": "Bakso",
+        "calories": 303,
+        "confidence": 81.61,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 202.0,
+        "image_url": "static/uploads\\maxresdefault.jpg",
+        "timestamp": "28/09/2025, 23:34:03"
+    },
+    {
+        "food_name": "Nasi Pecel",
+        "calories": "Tidak tersedia",
+        "confidence": 99.46,
+        "model_used": "mobilenet",
+        "portion": null,
+        "per100g": null,
+        "image_url": "static/uploads\\Overhead-plate-Nasi-Goreng-Indon.jpg",
+        "timestamp": "28/09/2025, 23:34:12"
+    },
+    {
+        "food_name": "Bebek Betutu",
+        "calories": 375,
+        "confidence": 69.52,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 250.0,
+        "image_url": "static/uploads\\NasiKuning-12_jpg.rf.8946167248e74a9c54ab3ae5c7b7586a.jpg",
+        "timestamp": "28/09/2025, 23:39:42"
+    },
+    {
+        "food_name": "Nasi Kuning",
+        "calories": 213,
+        "confidence": 38.35,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 142.0,
+        "image_url": "static/uploads\\NasiKuning-5_jpg.rf.b3e38d9d0cd4ba712a766ad2c65cb0a5.jpg",
+        "timestamp": "28/09/2025, 23:39:49"
+    },
+    {
+        "food_name": "Bebek Betutu",
+        "calories": 375,
+        "confidence": 30.97,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 250.0,
+        "image_url": "static/uploads\\nasi-pecel-12_jpg.rf.9fb61f51c6e1e4dfb07e220aefc20f08.jpg",
+        "timestamp": "28/09/2025, 23:40:15"
+    },
+    {
+        "food_name": "Gado Gado",
+        "calories": 206,
+        "confidence": 40.79,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 137.0,
+        "image_url": "static/uploads\\nasi-pecel-37_jpg.rf.43cc565d4e920bec41e6843318cf9ce3.jpg",
+        "timestamp": "28/09/2025, 23:40:21"
+    },
+    {
+        "food_name": "Nasi Pecel",
+        "calories": "Tidak tersedia",
+        "confidence": 30.64,
+        "model_used": "simplecnn",
+        "portion": null,
+        "per100g": null,
+        "image_url": "static/uploads\\nasi-pecel-53_jpg.rf.ae8e182d52dd45cb8e2867532cd9cc59.jpg",
+        "timestamp": "28/09/2025, 23:40:27"
+    },
+    {
+        "food_name": "Bakso",
+        "calories": 303,
+        "confidence": 48.01,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 202.0,
+        "image_url": "static/uploads\\nasi-pecel-6_jpg.rf.8c4d7d3c30bfbba5a8472a3ad9c7ea9f.jpg",
+        "timestamp": "29/09/2025, 09:19:35"
+    },
+    {
+        "food_name": "Gado Gado",
+        "calories": 206,
+        "confidence": 89.81,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 137.0,
+        "image_url": "static/uploads\\Gado_gado_jakarta.jpg",
+        "timestamp": "29/09/2025, 09:19:50"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 93.08,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\Overhead-plate-Nasi-Goreng-Indon.jpg",
+        "timestamp": "29/09/2025, 09:20:17"
+    },
+    {
+        "food_name": "Rawon",
+        "calories": 507,
+        "confidence": 80.05,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 338.0,
+        "image_url": "static/uploads\\Rawon.jpg",
+        "timestamp": "29/09/2025, 09:20:35"
+    },
+    {
+        "food_name": "Soto",
+        "calories": 225,
+        "confidence": 12.43,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 150.0,
+        "image_url": "static/uploads\\Gado_gado_jakarta.jpg",
+        "timestamp": "29/09/2025, 09:20:44"
+    },
+    {
+        "food_name": "Soto",
+        "calories": 225,
+        "confidence": 12.4,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 150.0,
+        "image_url": "static/uploads\\238137.jpg",
+        "timestamp": "29/09/2025, 09:21:05"
+    },
+    {
+        "food_name": "Soto",
+        "calories": 225,
+        "confidence": 12.44,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 150.0,
+        "image_url": "static/uploads\\bakso-enak-di-malang-00.jpg",
+        "timestamp": "29/09/2025, 09:21:11"
+    },
+    {
+        "food_name": "Soto",
+        "calories": 225,
+        "confidence": 12.42,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 150.0,
+        "image_url": "static/uploads\\Overhead-plate-Nasi-Goreng-Indon.jpg",
+        "timestamp": "29/09/2025, 09:21:17"
+    },
+    {
+        "food_name": "Gulai Tambusu",
+        "calories": 270,
+        "confidence": 56.18,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 180.0,
+        "image_url": "static/uploads\\Resep_Telur_Balado_Pedas_Manis.jpg",
+        "timestamp": "03/10/2025, 08:11:17"
+    },
+    {
+        "food_name": "Ayam Pop",
+        "calories": 300,
+        "confidence": 45.29,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 200.0,
+        "image_url": "static/uploads\\Screen_Shot_2021-11-29_at_16_40.jpg",
+        "timestamp": "03/10/2025, 08:11:25"
+    },
+    {
+        "food_name": "Rawon",
+        "calories": 507,
+        "confidence": 80.05,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 338.0,
+        "image_url": "static/uploads\\Rawon.jpg",
+        "timestamp": "03/10/2025, 08:11:31"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 31.88,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\resep_nasi_goreng_jawa_07_535176.jpg",
+        "timestamp": "03/10/2025, 08:12:31"
+    },
+    {
+        "food_name": "Pempek",
+        "calories": 243,
+        "confidence": 49.44,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 162.0,
+        "image_url": "static/uploads\\gnz1nWPqEgzB5qD72VPIuVVccGQWXLGq.jpg",
+        "timestamp": "04/10/2025, 22:08:33"
+    },
+    {
+        "food_name": "Bakso",
+        "calories": 303,
+        "confidence": 92.28,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 202.0,
+        "image_url": "static/uploads\\bakso-enak-di-malang-00.jpg",
+        "timestamp": "04/10/2025, 22:08:43"
+    },
+    {
+        "food_name": "Pempek",
+        "calories": 243,
+        "confidence": 65.76,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 162.0,
+        "image_url": "static/uploads\\gnz1nWPqEgzB5qD72VPIuVVccGQWXLGq.jpg",
+        "timestamp": "04/10/2025, 22:08:59"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 67.58,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\554772730_17900096658272109_5080.jpg",
+        "timestamp": "04/10/2025, 22:10:24"
+    },
+    {
+        "food_name": "Soto",
+        "calories": 225,
+        "confidence": 12.42,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 150.0,
+        "image_url": "static/uploads\\554772730_17900096658272109_5080.jpg",
+        "timestamp": "04/10/2025, 22:10:46"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 13.98,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\513502790_17849743440490940_5078.jpg",
+        "timestamp": "04/10/2025, 22:12:43"
+    },
+    {
+        "food_name": "Gulai Tambusu",
+        "calories": 270,
+        "confidence": 56.18,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 180.0,
+        "image_url": "static/uploads\\Resep_Telur_Balado_Pedas_Manis.jpg",
+        "timestamp": "04/10/2025, 22:12:55"
+    },
+    {
+        "food_name": "Gado Gado",
+        "calories": 206,
+        "confidence": 89.81,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 137.0,
+        "image_url": "static/uploads\\Gado_gado_jakarta.jpg",
+        "timestamp": "04/10/2025, 22:13:10"
+    },
+    {
+        "food_name": "Gulai Tambusu",
+        "calories": 270,
+        "confidence": 63.08,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 180.0,
+        "image_url": "static/uploads\\telur_balado (9).jpg",
+        "timestamp": "04/10/2025, 22:13:41"
+    },
+    {
+        "food_name": "Gulai Tambusu",
+        "calories": 270,
+        "confidence": 49.81,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 180.0,
+        "image_url": "static/uploads\\8c2094f0fa4c66ffac93f18d0406d4b7.jpg",
+        "timestamp": "06/10/2025, 20:34:54"
+    },
+    {
+        "food_name": "Dendeng Batokok",
+        "calories": 450,
+        "confidence": 94.17,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 300.0,
+        "image_url": "static/uploads\\633296028a9f4.jpg",
+        "timestamp": "06/10/2025, 20:35:31"
+    },
+    {
+        "food_name": "Gulai Tunjang",
+        "calories": 183,
+        "confidence": 66.31,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 122.0,
+        "image_url": "static/uploads\\8c2094f0fa4c66ffac93f18d0406d4b7.jpg",
+        "timestamp": "06/10/2025, 20:37:21"
+    },
+    {
+        "food_name": "Bakso",
+        "calories": 303,
+        "confidence": 50.37,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 202.0,
+        "image_url": "static/uploads\\bakso-enak-di-malang-00.jpg",
+        "timestamp": "06/10/2025, 21:16:28"
+    },
+    {
+        "food_name": "Soto",
+        "calories": 225,
+        "confidence": 12.43,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 150.0,
+        "image_url": "static/uploads\\Gado_gado_jakarta.jpg",
+        "timestamp": "06/10/2025, 21:25:18"
+    },
+    {
+        "food_name": "Ayam Goreng",
+        "calories": 412,
+        "confidence": 84.83,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 275.0,
+        "image_url": "static/uploads\\maxresdefault.jpg",
+        "timestamp": "06/10/2025, 21:50:05"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 76.02,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\554772730_17900096658272109_5080.jpg",
+        "timestamp": "08/10/2025, 13:51:08"
+    },
+    {
+        "food_name": "Gulai Tunjang",
+        "calories": 183,
+        "confidence": 49.68,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 122.0,
+        "image_url": "static/uploads\\8c2094f0fa4c66ffac93f18d0406d4b7.jpg",
+        "timestamp": "08/10/2025, 13:51:21"
+    },
+    {
+        "food_name": "Dendeng Batokok",
+        "calories": 450,
+        "confidence": 97.4,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 300.0,
+        "image_url": "static/uploads\\633296028a9f4.jpg",
+        "timestamp": "08/10/2025, 13:51:27"
+    },
+    {
+        "food_name": "Soto",
+        "calories": 225,
+        "confidence": 10.75,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 150.0,
+        "image_url": "static/uploads\\Screen_Shot_2021-11-29_at_16_40.jpg",
+        "timestamp": "08/10/2025, 13:51:50"
+    },
+    {
+        "food_name": "Ayam Pop",
+        "calories": 300,
+        "confidence": 83.05,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 200.0,
+        "image_url": "static/uploads\\Screen_Shot_2021-11-29_at_16_40.jpg",
+        "timestamp": "08/10/2025, 13:52:09"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 76.02,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\554772730_17900096658272109_5080.jpg",
+        "timestamp": "08/10/2025, 20:03:25"
+    },
+    {
+        "food_name": "Sate",
+        "calories": 300,
+        "confidence": 99.9,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 200.0,
+        "image_url": "static/uploads\\image_750x_67affb0e4227a.jpg",
+        "timestamp": "08/10/2025, 20:03:54"
+    },
+    {
+        "food_name": "Soto",
+        "calories": 225,
+        "confidence": 10.77,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 150.0,
+        "image_url": "static/uploads\\Gado_gado_jakarta.jpg",
+        "timestamp": "08/10/2025, 20:46:37"
+    },
+    {
+        "food_name": "Soto",
+        "calories": 225,
+        "confidence": 10.77,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 150.0,
+        "image_url": "static/uploads\\554772730_17900096658272109_5080.jpg",
+        "timestamp": "08/10/2025, 20:47:18"
+    },
+    {
+        "food_name": "Rawon",
+        "calories": 507,
+        "confidence": 68.18,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 338.0,
+        "image_url": "static/uploads\\Rawon.jpg",
+        "timestamp": "08/10/2025, 20:48:12"
+    },
+    {
+        "food_name": "Ayam Goreng",
+        "calories": 412,
+        "confidence": 88.99,
+        "model_used": "simplecnn",
+        "portion": 150,
+        "per100g": 275.0,
+        "image_url": "static/uploads\\maxresdefault.jpg",
+        "timestamp": "08/10/2025, 20:48:51"
+    },
+    {
+        "food_name": "Ayam Goreng",
+        "calories": 412,
+        "confidence": 80.25,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 275.0,
+        "image_url": "static/uploads\\maxresdefault.jpg",
+        "timestamp": "13/10/2025, 21:55:00"
+    },
+    {
+        "food_name": "Soto",
+        "calories": 225,
+        "confidence": 10.75,
+        "model_used": "efficientnet",
+        "portion": 150,
+        "per100g": 150.0,
+        "image_url": "static/uploads\\8c2094f0fa4c66ffac93f18d0406d4b7.jpg",
+        "timestamp": "13/10/2025, 21:56:29"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 76.02,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\554772730_17900096658272109_5080.jpg",
+        "timestamp": "13/10/2025, 23:02:51"
+    },
+    {
+        "food_name": "Nasi Goreng",
+        "calories": 400,
+        "confidence": 76.02,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 267.0,
+        "image_url": "static/uploads\\554772730_17900096658272109_5080.jpg",
+        "timestamp": "14/10/2025, 13:26:45"
+    },
+    {
+        "food_name": "Ayam Goreng",
+        "calories": 412,
+        "confidence": 80.25,
+        "model_used": "mobilenet",
+        "portion": 150,
+        "per100g": 275.0,
+        "image_url": "static/uploads\\maxresdefault.jpg",
+        "timestamp": "14/10/2025, 13:28:22"
+    }
+]
