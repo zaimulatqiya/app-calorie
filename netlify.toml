@@ -1,0 +1,10 @@
+[build]
+  # Upgrade pip/setuptools/wheel first to avoid build-time incompatibilities,
+  # then install requirements. This is safe and works on Netlify build images.
+  command = "python -m pip install --upgrade pip setuptools wheel && python -m pip install -r requirements.txt"
+  # Set publish directory if your app has a specific folder; leaving as repo root
+  publish = "."
+
+# Optional: you can set environment variables per context here if needed.
+# [context.production.environment]
+#   PYTHONUNBUFFERED = "1"
