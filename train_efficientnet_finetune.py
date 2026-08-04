@@ -7,10 +7,10 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 import os, json
 
-# Path dataset
+
 dataset_path = "data/dataset_makanan_indonesia"
 
-# Data generator dengan augmentasi
+
 datagen = ImageDataGenerator(
     rescale=1./255,
     validation_split=0.2,
@@ -48,7 +48,7 @@ print(f"{'='*60}\n")
 
 assert len(train_gen.class_indices) == 18, f"❌ ERROR: Expected 18 classes, got {len(train_gen.class_indices)}"
 
-# Base model EfficientNet
+
 base_model = EfficientNetB0(
     include_top=False,
     weights='imagenet',
@@ -56,7 +56,7 @@ base_model = EfficientNetB0(
 )
 base_model.trainable = False  # Freeze di tahap 1
 
-# Model
+
 model = Sequential([
     base_model,
     GlobalAveragePooling2D(),
@@ -66,14 +66,14 @@ model = Sequential([
     Dense(len(train_gen.class_indices), activation='softmax')
 ])
 
-# Compile tahap 1
+
 model.compile(
     optimizer=Adam(learning_rate=1e-4),
     loss='categorical_crossentropy',
     metrics=['accuracy']
 )
 
-# Callbacks
+
 early_stop = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
 reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=3, min_lr=1e-6)
 
@@ -85,13 +85,13 @@ history_stage1 = model.fit(
     callbacks=[early_stop, reduce_lr]
 )
 
-# Fine-tuning tahap 2
+
 print("🔧 Fine-tuning tahap 2 (unfreeze 50 layer terakhir)...")
 base_model.trainable = True
 for layer in base_model.layers[:-50]:  # Freeze semua kecuali 50 layer terakhir
     layer.trainable = False
 
-# Compile ulang dengan learning rate kecil
+
 model.compile(
     optimizer=Adam(learning_rate=1e-5),
     loss='categorical_crossentropy',
@@ -105,11 +105,11 @@ history_stage2 = model.fit(
     callbacks=[early_stop, reduce_lr]
 )
 
-# Simpan model
+
 os.makedirs("models", exist_ok=True)
 model.save("models/food_model_efficientnet_finetuned.h5")
 
-# Simpan mapping kelas
+
 with open("models/class_indices.json", "w") as f:
     json.dump(train_gen.class_indices, f)
 

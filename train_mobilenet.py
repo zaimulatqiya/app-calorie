@@ -6,10 +6,10 @@ from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.callbacks import EarlyStopping
 import os, json
 
-# Path dataset
+
 dataset_path = "data/dataset_makanan_indonesia"
 
-# Data generator + augmentation
+
 datagen = ImageDataGenerator(
     rescale=1./255,
     validation_split=0.2,
@@ -47,11 +47,11 @@ print(f"{'='*60}\n")
 
 assert len(train_gen.class_indices) == 18, f"❌ ERROR: Expected 18 classes, got {len(train_gen.class_indices)}"
 
-# Base model
+
 base_model = MobileNetV2(weights='imagenet', include_top=False, input_shape=(128, 128, 3))
 base_model.trainable = False
 
-# Model
+
 model = Sequential([
     base_model,
     GlobalAveragePooling2D(),
@@ -62,7 +62,7 @@ model = Sequential([
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-# Early stopping
+
 early_stop = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
 
 # Training tahap 1
@@ -79,11 +79,11 @@ model.compile(optimizer=tf.keras.optimizers.Adam(1e-5),
 
 history_ft = model.fit(train_gen, validation_data=val_gen, epochs=10, callbacks=[early_stop])
 
-# Simpan model
+
 os.makedirs("models", exist_ok=True)
 model.save("models/food_model_mobilenet.h5")
 
-# Simpan mapping kelas
+
 with open("models/class_indices.json", "w") as f:
     json.dump(train_gen.class_indices, f)
 

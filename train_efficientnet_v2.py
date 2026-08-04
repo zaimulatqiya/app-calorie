@@ -6,10 +6,10 @@ from tensorflow.keras.applications import EfficientNetB0
 from tensorflow.keras.callbacks import EarlyStopping
 import os, json
 
-# Path dataset
+
 dataset_path = "data/dataset_makanan_indonesia"
 
-# Data generator + augmentation
+
 datagen = ImageDataGenerator(
     rescale=1./255,
     validation_split=0.2,
@@ -24,7 +24,7 @@ datagen = ImageDataGenerator(
 
 train_gen = datagen.flow_from_directory(
     dataset_path,
-    target_size=(224, 224),  # 🔥 ganti dari 128 ke 224
+    target_size=(224, 224),  
     batch_size=32,
     class_mode='categorical',
     subset='training'
@@ -32,17 +32,17 @@ train_gen = datagen.flow_from_directory(
 
 val_gen = datagen.flow_from_directory(
     dataset_path,
-    target_size=(224, 224),  # 🔥 ganti dari 128 ke 224
+    target_size=(224, 224),  
     batch_size=32,
     class_mode='categorical',
     subset='validation'
 )
 
-# Base model EfficientNetB0
+
 base_model = EfficientNetB0(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 base_model.trainable = False
 
-# Model
+
 model = Sequential([
     base_model,
     GlobalAveragePooling2D(),
@@ -53,28 +53,28 @@ model = Sequential([
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-# Early stopping
+
 early_stop = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
 
-# 🔥 Training tahap 1 (feature extraction)
+# Training tahap 1 (feature extraction)
 history = model.fit(train_gen, validation_data=val_gen, epochs=30, callbacks=[early_stop])
 
-# 🔥 Fine-tuning tahap 2
+# Fine-tuning tahap 2
 base_model.trainable = True
 for layer in base_model.layers[:-50]:  # buka 50 layer terakhir
     layer.trainable = False
 
-model.compile(optimizer=tf.keras.optimizers.Adam(1e-5),  # 🔥 learning rate kecil
+model.compile(optimizer=tf.keras.optimizers.Adam(1e-5),  #  learning rate kecil
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 history_ft = model.fit(train_gen, validation_data=val_gen, epochs=30, callbacks=[early_stop])
 
-# Simpan model
+
 os.makedirs("models", exist_ok=True)
 model.save("models/food_model_efficientnet_v2.h5")
 
-# Simpan mapping kelas
+
 with open("models/class_indices.json", "w") as f:
     json.dump(train_gen.class_indices, f)
 

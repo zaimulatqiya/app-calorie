@@ -10,10 +10,10 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
-# Dictionary untuk menyimpan model yang telah dimuat
+
 loaded_models = {}
 
-# Load mapping kelas
+
 with open("models/class_indices.json") as f:
     class_indices = json.load(f)
 
@@ -44,33 +44,45 @@ calorie_db = {
     "telur_dadar": 154.0
 }
 
-# Mapping model paths
+
 model_paths = {
     "mobilenet": "models/food_model_mobilenet.h5",
     "efficientnet": "models/food_model_efficientnet_finetuned.h5",
     "simplecnn": "models/food_model.h5"
 }
 
-# Mapping ukuran input tiap model
+
 input_sizes = {
     "mobilenet": (128, 128),
     "efficientnet": (224, 224),
     "simplecnn": (128, 128)
 }
 
-# File untuk simpan riwayat
-HISTORY_FILE = "history.json"
 
-# Load history dari file jika ada
-if os.path.exists(HISTORY_FILE):
-    with open(HISTORY_FILE, "r") as f:
-        history = json.load(f)
-else:
-    history = []
+HISTORY_FILE = "history.json"
 
 def save_history():
     with open(HISTORY_FILE, "w") as f:
         json.dump(history, f, indent=4)
+
+
+REVERSE_MARKER = ".history_reversed"
+if os.path.exists(HISTORY_FILE):
+    with open(HISTORY_FILE, "r") as f:
+        history = json.load(f)
+    
+    # Reverse history hanya sekali (untuk migrasi dari urutan lama ke baru)
+    if not os.path.exists(REVERSE_MARKER) and len(history) > 0:
+        history.reverse()
+        save_history()
+        # Buat marker file agar tidak di-reverse lagi
+        with open(REVERSE_MARKER, "w") as f:
+            f.write("reversed")
+        print(f"✅ History reversed for the first time: {len(history)} items")
+    else:
+        print(f"✅ History loaded: {len(history)} items")
+else:
+    history = []
 
 def load_model_by_choice(model_choice):
     """Load model berdasarkan pilihan user dengan caching"""
@@ -127,7 +139,7 @@ def analyze_food():
         per100g = calorie_db.get(food_name)
         
         if per100g is not None:
-            # Gunakan DEFAULT_PORTION
+            
             portion = DEFAULT_PORTION
             calories = round(per100g * portion / 100)
         else:
@@ -148,8 +160,8 @@ def analyze_food():
             "timestamp": datetime.now().strftime("%d/%m/%Y, %H:%M:%S")
         }
 
-        # Simpan ke riwayat
-        history.append(result)
+        # Simpan ke riwayat (insert di awal agar yang terbaru muncul di atas)
+        history.insert(0, result)
         save_history()
 
         return jsonify(result)
@@ -162,11 +174,14 @@ def analyze_food():
 
 @app.route('/recalculate', methods=['POST'])
 def recalculate_calories():
-    """Endpoint untuk menghitung ulang kalori dengan porsi baru"""
+    """Endpoint untuk menghitung ulang kalori dengan porsi baru dan update history"""
     try:
+        global history
+        
         data = request.get_json()
         food_name = data.get('food_name', '').lower().replace(' ', '_')
         new_portion = float(data.get('portion', 0))
+        timestamp = data.get('timestamp', '')  # Untuk identifikasi item di history
         
         if new_portion <= 0:
             return jsonify({'error': 'Porsi harus lebih dari 0 gram'})
@@ -177,6 +192,19 @@ def recalculate_calories():
         per100g = calorie_db.get(food_name)
         if per100g:
             new_calories = round(per100g * new_portion / 100)
+            
+            # Update history jika ada timestamp
+            if timestamp and len(history) > 0:
+                # Cari item di history berdasarkan timestamp
+                for item in history:
+                    if item.get('timestamp') == timestamp:
+                        item['calories'] = new_calories
+                        item['portion'] = new_portion
+                        print(f"✅ Updated history item: {food_name} with portion {new_portion}g = {new_calories} kal")
+                        break
+                
+                # Simpan perubahan ke file
+                save_history()
             
             return jsonify({
                 'success': True,
@@ -191,6 +219,8 @@ def recalculate_calories():
         return jsonify({'error': 'Format porsi tidak valid'})
     except Exception as e:
         print(f"❌ Error in recalculate_calories: {str(e)}")
+        import traceback
+        traceback.print_exc()
         return jsonify({'error': f'Terjadi kesalahan: {str(e)}'})
 
 @app.route('/history')
@@ -202,12 +232,16 @@ def clear_history():
     try:
         global history
         
+        print(f"🗑️ Clearing history... Current items: {len(history)}")
+        
         # Hapus semua file gambar di folder uploads
+        deleted_images = 0
         for item in history:
             if item.get('image_url'):
                 try:
                     if os.path.exists(item['image_url']):
                         os.remove(item['image_url'])
+                        deleted_images += 1
                         print(f"✅ Deleted image: {item['image_url']}")
                 except Exception as e:
                     print(f"⚠️ Could not delete image: {e}")
@@ -216,9 +250,12 @@ def clear_history():
         history = []
         save_history()
         
-        return jsonify({"message": "History cleared successfully", "success": True})
+        print(f"✅ History cleared successfully! Deleted {deleted_images} images")
+        return jsonify({"message": "History cleared successfully", "success": True, "deleted_images": deleted_images})
     except Exception as e:
         print(f"❌ Error in clear_history: {str(e)}")
+        import traceback
+        traceback.print_exc()
         return jsonify({"error": str(e), "success": False}), 500
 
 @app.route('/delete_history_item', methods=['POST'])

@@ -1,0 +1,4 @@
+Model 1,Model 2,Accuracy 1 (%),Accuracy 2 (%),Mean Diff (%),T-statistic,P-value,CI 95% Lower,CI 95% Upper,Significant,Better Model
+MobileNetV2,EfficientNetB0,72.61,12.24,60.3691,86.0457,0.000000,58.9937%,61.7444%,Yes,MobileNetV2
+MobileNetV2,SimpleCNN,72.61,66.73,5.8744,8.0223,0.000000,4.4389%,7.3099%,Yes,MobileNetV2
+EfficientNetB0,SimpleCNN,12.24,66.73,-54.4947,-72.9120,0.000000,-55.9599%,-53.0295%,Yes,SimpleCNN
