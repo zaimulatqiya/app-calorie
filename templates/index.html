@@ -769,7 +769,28 @@
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.json())
+            .then(response => {
+                // Cek apakah server mengembalikan respons yang normal
+                if (!response.ok) {
+                    // Jika server error (misal: file terlalu besar, server mati),
+                    // coba baca pesannya dulu sebelum ditampilkan ke pengguna
+                    return response.json().catch(() => {
+                        // Jika respons bukan JSON (misal: halaman error HTML dari server),
+                        // tampilkan pesan yang mudah dipahami berdasarkan kode errornya
+                        if (response.status === 413) {
+                            throw new Error('Ukuran file terlalu besar. Maksimal yang diperbolehkan adalah 16MB.');
+                        } else if (response.status >= 500) {
+                            throw new Error('Server sedang mengalami gangguan. Coba lagi beberapa saat.');
+                        } else {
+                            throw new Error(`Terjadi kesalahan (kode: ${response.status}). Coba lagi.`);
+                        }
+                    }).then(data => {
+                        // Jika JSON berhasil dibaca tapi statusnya error, lempar pesannya
+                        throw new Error(data.error || 'Terjadi kesalahan yang tidak diketahui.');
+                    });
+                }
+                return response.json();
+            })
             .then(data => {
                 isProcessing = false;
                 
@@ -784,7 +805,12 @@
             .catch(error => {
                 isProcessing = false;
                 console.error('Upload error:', error);
-                showAlert('error', 'Koneksi Bermasalah', 'Tidak dapat terhubung ke server. Periksa koneksi internet Anda.');
+                // Tampilkan pesan error yang sebenarnya jika ada, 
+                // atau pesan koneksi jika tidak ada jawaban dari server sama sekali
+                const pesanError = error.message && error.message !== 'Failed to fetch'
+                    ? error.message
+                    : 'Tidak dapat terhubung ke server. Periksa koneksi internet Anda.';
+                showAlert('error', 'Terjadi Masalah', pesanError);
                 showPage('home');
             });
         }

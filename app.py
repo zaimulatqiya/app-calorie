@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 import os
+import uuid
 import numpy as np
+from werkzeug.utils import secure_filename
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import json
@@ -8,7 +10,23 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # Batas ukuran file: maksimal 16MB
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+
+# Daftar ekstensi file gambar yang diperbolehkan
+ALLOWED_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.webp'}
+
+def allowed_file(filename):
+    """Cek apakah ekstensi file termasuk yang diizinkan"""
+    if not filename or '.' not in filename:
+        return False
+    ext = os.path.splitext(secure_filename(filename))[1].lower()
+    return ext in ALLOWED_EXTENSIONS
+
+@app.errorhandler(413)
+def file_terlalu_besar(e):
+    """Tampilkan pesan yang jelas jika file yang diunggah terlalu besar"""
+    return jsonify({'error': 'Ukuran file terlalu besar. Maksimal yang diperbolehkan adalah 16MB.'}), 413
 
 
 loaded_models = {}
@@ -108,18 +126,25 @@ def home():
 def analyze_food():
     try:
         if 'file' not in request.files:
-            return jsonify({'error': 'No file uploaded'})
+            return jsonify({'error': 'Tidak ada file yang diunggah. Silakan pilih foto terlebih dahulu.'}), 400
 
         file = request.files['file']
         model_choice = request.form.get("model_choice", "mobilenet")
 
         if file.filename == '':
-            return jsonify({'error': 'No file selected'})
+            return jsonify({'error': 'Belum ada file yang dipilih. Silakan pilih foto makanan Anda.'}), 400
+
+        # Validasi ekstensi file di sisi server (keamanan)
+        if not allowed_file(file.filename):
+            return jsonify({'error': 'Format file tidak didukung. Gunakan foto dengan format JPG, PNG, atau WEBP.'}), 400
 
         if model_choice not in model_paths:
             model_choice = "mobilenet"
 
-        filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+        # Buat nama file unik menggunakan UUID agar aman dan tidak bentrok
+        ext = os.path.splitext(secure_filename(file.filename))[1].lower()
+        unique_filename = f"{uuid.uuid4().hex}{ext}"
+        filepath = os.path.join(app.config['UPLOAD_FOLDER'], unique_filename)
         file.save(filepath)
 
         model = load_model_by_choice(model_choice)
@@ -170,7 +195,7 @@ def analyze_food():
         print(f"❌ Error in analyze_food: {str(e)}")
         import traceback
         traceback.print_exc()
-        return jsonify({'error': f'Terjadi kesalahan: {str(e)}'})
+        return jsonify({'error': 'Terjadi kesalahan pada server saat memproses foto Anda. Coba lagi beberapa saat.'}), 500
 
 @app.route('/recalculate', methods=['POST'])
 def recalculate_calories():
@@ -184,10 +209,10 @@ def recalculate_calories():
         timestamp = data.get('timestamp', '')  # Untuk identifikasi item di history
         
         if new_portion <= 0:
-            return jsonify({'error': 'Porsi harus lebih dari 0 gram'})
+            return jsonify({'error': 'Ukuran porsi harus lebih dari 0 gram.'}), 400
         
         if new_portion > 10000:
-            return jsonify({'error': 'Porsi terlalu besar (maksimal 10kg)'})
+            return jsonify({'error': 'Ukuran porsi terlalu besar. Maksimal yang diperbolehkan adalah 10.000 gram (10 kg).'}), 400
         
         per100g = calorie_db.get(food_name)
         if per100g:
@@ -213,15 +238,15 @@ def recalculate_calories():
                 'per100g': per100g
             })
         else:
-            return jsonify({'error': 'Informasi kalori tidak tersedia'})
+            return jsonify({'error': 'Informasi kalori untuk makanan ini belum tersedia di database.'}), 404
             
     except ValueError:
-        return jsonify({'error': 'Format porsi tidak valid'})
+        return jsonify({'error': 'Format porsi tidak valid. Masukkan angka yang benar, contoh: 150'}), 400
     except Exception as e:
         print(f"❌ Error in recalculate_calories: {str(e)}")
         import traceback
         traceback.print_exc()
-        return jsonify({'error': f'Terjadi kesalahan: {str(e)}'})
+        return jsonify({'error': 'Terjadi kesalahan pada server saat menghitung ulang kalori. Coba lagi beberapa saat.'}), 500
 
 @app.route('/history')
 def get_history():

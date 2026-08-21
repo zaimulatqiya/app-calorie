@@ -1,202 +1,32 @@
 [
     {
-        "food_name": "Dendeng Batokok",
-        "calories": 450,
-        "confidence": 98.33,
-        "model_used": "mobilenet",
-        "portion": 150,
-        "per100g": 300.0,
-        "image_url": "static/uploads\\633296028a9f4.jpg",
-        "timestamp": "17/07/2026, 14:36:25"
-    },
-    {
-        "food_name": "Ayam Pop",
-        "calories": 300,
-        "confidence": 51.62,
-        "model_used": "mobilenet",
-        "portion": 150,
-        "per100g": 200.0,
-        "image_url": "static/uploads\\Screen_Shot_2021-11-29_at_16_40.jpg",
-        "timestamp": "17/07/2026, 14:34:58"
-    },
-    {
-        "food_name": "Gado Gado",
-        "calories": 206,
-        "confidence": 98.35,
-        "model_used": "mobilenet",
-        "portion": 150,
-        "per100g": 137.0,
-        "image_url": "static/uploads\\Gado_gado_jakarta.jpg",
-        "timestamp": "26/06/2026, 15:57:32"
-    },
-    {
-        "food_name": "Rendang",
-        "calories": 290,
-        "confidence": 34.04,
-        "model_used": "simplecnn",
-        "portion": 150,
-        "per100g": 193.0,
-        "image_url": "static/uploads\\images.jpg",
-        "timestamp": "23/06/2026, 23:53:54"
-    },
-    {
         "food_name": "Bebek Betutu",
         "calories": 375,
-        "confidence": 58.54,
-        "model_used": "simplecnn",
+        "confidence": 42.13,
+        "model_used": "mobilenet",
         "portion": 150,
         "per100g": 250.0,
-        "image_url": "static/uploads\\ayam-goreng-final.jpg",
-        "timestamp": "23/06/2026, 23:52:28"
-    },
-    {
-        "food_name": "Rendang",
-        "calories": 290,
-        "confidence": 74.28,
-        "model_used": "simplecnn",
-        "portion": 150,
-        "per100g": 193.0,
-        "image_url": "static/uploads\\ayam goreng.jpg",
-        "timestamp": "23/06/2026, 23:51:17"
-    },
-    {
-        "food_name": "Rendang",
-        "calories": 290,
-        "confidence": 41.03,
-        "model_used": "simplecnn",
-        "portion": 150,
-        "per100g": 193.0,
-        "image_url": "static/uploads\\maxresdefault.jpg",
-        "timestamp": "23/06/2026, 23:51:02"
+        "image_url": "static/uploads\\7c25836431444e25bfc25ed302dbae25.jpg",
+        "timestamp": "06/08/2026, 15:55:07"
     },
     {
         "food_name": "Rawon",
         "calories": 507,
-        "confidence": 94.03,
-        "model_used": "simplecnn",
+        "confidence": 69.51,
+        "model_used": "mobilenet",
         "portion": 150,
         "per100g": 338.0,
-        "image_url": "static/uploads\\Rawon.jpg",
-        "timestamp": "23/06/2026, 23:46:43"
+        "image_url": "static/uploads\\062c17a5631d4e6d817ceb5f9c154ec3.jpg",
+        "timestamp": "06/08/2026, 15:52:32"
     },
     {
-        "food_name": "Sate",
-        "calories": 300,
-        "confidence": 99.98,
-        "model_used": "mobilenet",
-        "portion": 150.0,
-        "per100g": 200.0,
-        "image_url": "static/uploads\\image_750x_67affb0e4227a.jpg",
-        "timestamp": "23/06/2026, 23:45:55"
-    },
-    {
-        "food_name": "Nasi Goreng",
-        "calories": 400,
-        "confidence": 83.91,
+        "food_name": "Gulai Tunjang",
+        "calories": 183,
+        "confidence": 63.13,
         "model_used": "mobilenet",
         "portion": 150,
-        "per100g": 267.0,
-        "image_url": "static/uploads\\554772730_17900096658272109_5080.jpg",
-        "timestamp": "23/06/2026, 23:44:19"
-    },
-    {
-        "food_name": "Rendang",
-        "calories": 290,
-        "confidence": 43.81,
-        "model_used": "mobilenet",
-        "portion": 150,
-        "per100g": 193.0,
-        "image_url": "static/uploads\\resep-nasi-goreng-sederhana-foto.jpg",
-        "timestamp": "23/06/2026, 23:43:47"
-    },
-    {
-        "food_name": "Gado Gado",
-        "calories": 206,
-        "confidence": 76.46,
-        "model_used": "simplecnn",
-        "portion": 150,
-        "per100g": 137.0,
-        "image_url": "static/uploads\\Gado_gado_jakarta.jpg",
-        "timestamp": "29/04/2026, 22:57:04"
-    },
-    {
-        "food_name": "Nasi Goreng",
-        "calories": 400,
-        "confidence": 99.91,
-        "model_used": "simplecnn",
-        "portion": 150,
-        "per100g": 267.0,
-        "image_url": "static/uploads\\resep_nasi_goreng_jawa_07_535176.jpg",
-        "timestamp": "29/04/2026, 22:56:57"
-    },
-    {
-        "food_name": "Nasi Goreng",
-        "calories": 400,
-        "confidence": 99.66,
-        "model_used": "simplecnn",
-        "portion": 150,
-        "per100g": 267.0,
-        "image_url": "static/uploads\\554772730_17900096658272109_5080.jpg",
-        "timestamp": "29/04/2026, 22:56:45"
-    },
-    {
-        "food_name": "Gulai Ikan",
-        "calories": 159,
-        "confidence": 38.75,
-        "model_used": "simplecnn",
-        "portion": 150,
-        "per100g": 106.0,
-        "image_url": "static/uploads\\8c2094f0fa4c66ffac93f18d0406d4b7.jpg",
-        "timestamp": "29/04/2026, 22:56:34"
-    },
-    {
-        "food_name": "Rendang",
-        "calories": 290,
-        "confidence": 43.58,
-        "model_used": "simplecnn",
-        "portion": 150,
-        "per100g": 193.0,
-        "image_url": "static/uploads\\image_750x_67affb0e4227a.jpg",
-        "timestamp": "29/04/2026, 22:56:19"
-    },
-    {
-        "food_name": "Soto",
-        "calories": 225,
-        "confidence": 12.22,
-        "model_used": "efficientnet",
-        "portion": 150,
-        "per100g": 150.0,
-        "image_url": "static/uploads\\image_750x_67affb0e4227a.jpg",
-        "timestamp": "25/04/2026, 20:12:32"
-    },
-    {
-        "food_name": "Sate",
-        "calories": 300,
-        "confidence": 99.99,
-        "model_used": "simplecnn",
-        "portion": 150,
-        "per100g": 200.0,
-        "image_url": "static/uploads\\image_750x_67affb0e4227a.jpg",
-        "timestamp": "25/04/2026, 20:11:53"
-    },
-    {
-        "food_name": "Sate",
-        "calories": 300,
-        "confidence": 99.98,
-        "model_used": "mobilenet",
-        "portion": 150,
-        "per100g": 200.0,
-        "image_url": "static/uploads\\image_750x_67affb0e4227a.jpg",
-        "timestamp": "25/04/2026, 20:11:08"
-    },
-    {
-        "food_name": "Rendang",
-        "calories": 290,
-        "confidence": 26.17,
-        "model_used": "mobilenet",
-        "portion": 150,
-        "per100g": 193.0,
-        "image_url": "static/uploads\\ayam goreng.jpg",
-        "timestamp": "23/01/2026, 13:54:05"
+        "per100g": 122.0,
+        "image_url": "static/uploads\\8c2cec7cc1b446c59118e6d63bbc5a2b.jpg",
+        "timestamp": "06/08/2026, 15:50:00"
     }
 ]
